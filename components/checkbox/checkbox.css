@@ -1,0 +1,81 @@
+/**
+ * AssetTrace Design System — Checkbox Component
+ * 5 states: Default | Selected | Partial | Selected Disable | Disable
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+.checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-m);    /* 8px */
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-default);
+  border-radius: var(--radius-xxs);   /* 2px */
+  background-color: var(--surface-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.checkbox:hover { border-color: var(--border-button-default); }
+
+.checkbox--selected,
+.checkbox-wrapper input[type="checkbox"]:checked + .checkbox {
+  background-color: var(--button-default);
+  border-color: var(--button-default);
+}
+
+.checkbox--selected::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+.checkbox--partial {
+  background-color: var(--button-default);
+  border-color: var(--button-default);
+}
+.checkbox--partial::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+.checkbox--disabled,
+.checkbox-wrapper input[type="checkbox"]:disabled + .checkbox {
+  background-color: var(--surface-disable);
+  border-color: var(--border-default);
+  cursor: not-allowed;
+}
+
+.checkbox-wrapper--disabled { cursor: not-allowed; }
+.checkbox-wrapper--disabled .checkbox-label { color: var(--typography-disable); }
+
+.checkbox-label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-regular-size);
+  font-weight: var(--font-label-l1-regular-weight);
+  color: var(--typography-default);
+  line-height: var(--font-label-l1-regular-line-height);
+}
+
+/* Hide native input */
+.checkbox-wrapper input[type="checkbox"] { display: none; }
