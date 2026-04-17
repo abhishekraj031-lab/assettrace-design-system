@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkbox — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="checkbox.css">
+  <style>body{font-family:'Poppins',sans-serif;background:#f8fafc;padding:32px}.col{display:flex;flex-direction:column;gap:16px}</style>
+</head>
+<body>
+  <div class="col">
+    <label class="checkbox-wrapper"><input type="checkbox"><div class="checkbox"></div><span class="checkbox-label">Default</span></label>
+    <label class="checkbox-wrapper"><input type="checkbox" checked><div class="checkbox checkbox--selected"></div><span class="checkbox-label">Selected</span></label>
+    <label class="checkbox-wrapper"><input type="checkbox"><div class="checkbox checkbox--partial"></div><span class="checkbox-label">Partial</span></label>
+    <label class="checkbox-wrapper checkbox-wrapper--disabled"><input type="checkbox" disabled><div class="checkbox checkbox--disabled"></div><span class="checkbox-label">Disabled</span></label>
+  </div>
+</body></html>
