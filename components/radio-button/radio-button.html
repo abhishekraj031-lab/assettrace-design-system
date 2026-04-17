@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Radio Button — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="radio-button.css">
+  <style>body{font-family:'Poppins',sans-serif;background:#f8fafc;padding:32px}.col{display:flex;flex-direction:column;gap:16px}</style>
+</head>
+<body>
+  <div class="col">
+    <label class="radio-wrapper"><input type="radio" name="r"><div class="radio"></div><span class="radio-label">Default</span></label>
+    <label class="radio-wrapper"><input type="radio" name="r"><div class="radio radio--selected"></div><span class="radio-label">Selected</span></label>
+    <label class="radio-wrapper"><input type="radio" name="r" disabled><div class="radio radio--disabled"></div><span class="radio-label">Disabled</span></label>
+  </div>
+</body></html>
