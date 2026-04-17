@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="button.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f8fafc; padding: 32px; }
+    .section { margin-bottom: 40px; }
+    .section-title { font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- FILLED BUTTONS -->
+  <div class="section">
+    <div class="section-title">Filled — Default States</div>
+    <div class="row">
+      <button class="btn btn--filled btn--lg">+ Add</button>
+      <button class="btn btn--filled btn--md">+ Add</button>
+      <button class="btn btn--filled btn--sm">+ Add</button>
+    </div>
+    <div class="row">
+      <button class="btn btn--filled btn--lg btn--hover">Hover</button>
+      <button class="btn btn--filled btn--lg btn--active">Active</button>
+      <button class="btn btn--filled btn--lg" disabled>Disabled</button>
+    </div>
+  </div>
+
+  <!-- FILLED — SEMANTIC STATES -->
+  <div class="section">
+    <div class="section-title">Filled — Semantic States</div>
+    <div class="row">
+      <button class="btn btn--filled btn--lg btn--success">+ Add</button>
+      <button class="btn btn--filled btn--lg btn--warning">+ Add</button>
+      <button class="btn btn--filled btn--lg btn--information">+ Add</button>
+      <button class="btn btn--filled btn--lg btn--destructive">+ Add</button>
+    </div>
+  </div>
+
+  <!-- OUTLINE BUTTONS -->
+  <div class="section">
+    <div class="section-title">Outline — All States</div>
+    <div class="row">
+      <button class="btn btn--outline btn--lg">+ Add</button>
+      <button class="btn btn--outline btn--md">+ Add</button>
+      <button class="btn btn--outline btn--sm">+ Add</button>
+    </div>
+    <div class="row">
+      <button class="btn btn--outline btn--lg btn--hover">Hover</button>
+      <button class="btn btn--outline btn--lg btn--active">Active</button>
+      <button class="btn btn--outline btn--lg" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <button class="btn btn--outline btn--lg btn--success">Success</button>
+      <button class="btn btn--outline btn--lg btn--warning">Warning</button>
+      <button class="btn btn--outline btn--lg btn--information">Info</button>
+      <button class="btn btn--outline btn--lg btn--destructive">Delete</button>
+    </div>
+  </div>
+
+  <!-- TEXT BUTTONS -->
+  <div class="section">
+    <div class="section-title">Text — All States</div>
+    <div class="row">
+      <button class="btn btn--text btn--lg">+ Add</button>
+      <button class="btn btn--text btn--md">+ Add</button>
+      <button class="btn btn--text btn--sm">+ Add</button>
+    </div>
+    <div class="row">
+      <button class="btn btn--text btn--lg btn--hover">Hover</button>
+      <button class="btn btn--text btn--lg btn--active">Active</button>
+      <button class="btn btn--text btn--lg" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <button class="btn btn--text btn--lg btn--success">Success</button>
+      <button class="btn btn--text btn--lg btn--warning">Warning</button>
+      <button class="btn btn--text btn--lg btn--information">Info</button>
+      <button class="btn btn--text btn--lg btn--destructive">Delete</button>
+    </div>
+  </div>
+
+</body>
+</html>
