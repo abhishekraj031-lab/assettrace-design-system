@@ -1,0 +1,34 @@
+/**
+ * AssetTrace Design System — Spacing & Border Radius
+ * 12 spacing tokens + 9 border radius tokens
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+:root {
+
+  /* Spacing */
+  --spacing-none: 0px;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-s: 6px;
+  --spacing-m: 8px;
+  --spacing-l: 10px;
+  --spacing-xl: 12px;
+  --spacing-xxl: 16px;
+  --spacing-3xl: 20px;
+  --spacing-4xl: 24px;
+  --spacing-5xl: 32px;
+  --spacing-6xl: 40px;
+
+  /* Border Radius */
+  --radius-none: 0px;
+  --radius-xxs: 2px;
+  --radius-xs: 4px;
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-l: 10px;
+  --radius-xl: 12px;
+  --radius-xxl: 16px;
+  --radius-xxxl: 20px;
+}
