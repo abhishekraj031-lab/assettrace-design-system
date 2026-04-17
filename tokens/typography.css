@@ -1,0 +1,174 @@
+/**
+ * AssetTrace Design System — Typography
+ * 15 text styles — all using Poppins font
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+/* Import Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+
+  /* Heading */
+  --font-heading-h1-size: 48px;
+  --font-heading-h1-weight: 700;
+  --font-heading-h1-line-height: 110%;
+  --font-heading-h2-size: 40px;
+  --font-heading-h2-weight: 700;
+  --font-heading-h2-line-height: 110%;
+  --font-heading-h3-size: 36px;
+  --font-heading-h3-weight: 700;
+  --font-heading-h3-line-height: 110%;
+  --font-heading-h4-size: 32px;
+  --font-heading-h4-weight: 700;
+  --font-heading-h4-line-height: 110%;
+  --font-heading-h5-size: 28px;
+  --font-heading-h5-weight: 700;
+  --font-heading-h5-line-height: 110%;
+  --font-heading-h6-size: 24px;
+  --font-heading-h6-weight: 700;
+  --font-heading-h6-line-height: 110%;
+
+  /* Body */
+  --font-body-b1-size: 20px;
+  --font-body-b1-weight: 600;
+  --font-body-b1-line-height: 125%;
+  --font-body-b2-size: 16px;
+  --font-body-b2-weight: 600;
+  --font-body-b2-line-height: 125%;
+
+  /* Label */
+  --font-label-l1-regular-size: 14px;
+  --font-label-l1-regular-weight: 400;
+  --font-label-l1-regular-line-height: 130%;
+  --font-label-l1-medium-size: 14px;
+  --font-label-l1-medium-weight: 500;
+  --font-label-l1-medium-line-height: 130%;
+  --font-label-l1-semibold-size: 14px;
+  --font-label-l1-semibold-weight: 600;
+  --font-label-l1-semibold-line-height: 130%;
+  --font-label-l2-regular-size: 12px;
+  --font-label-l2-regular-weight: 400;
+  --font-label-l2-regular-line-height: 140%;
+  --font-label-l2-medium-size: 12px;
+  --font-label-l2-medium-weight: 500;
+  --font-label-l2-medium-line-height: 140%;
+  --font-label-l2-semibold-size: 12px;
+  --font-label-l2-semibold-weight: 600;
+  --font-label-l2-semibold-line-height: 140%;
+  --font-label-l3-regular-size: 11px;
+  --font-label-l3-regular-weight: 400;
+  --font-label-l3-regular-line-height: 150%;
+
+  /* Font Family */
+  --font-family-base: 'Poppins', sans-serif;
+}
+
+
+/* ─── Utility Classes ─────────────────────────── */
+
+.text-heading-h1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-heading-h1-size);
+  font-weight: var(--font-heading-h1-weight);
+  line-height: var(--font-heading-h1-line-height);
+}
+
+.text-heading-h2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-heading-h2-size);
+  font-weight: var(--font-heading-h2-weight);
+  line-height: var(--font-heading-h2-line-height);
+}
+
+.text-heading-h3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-heading-h3-size);
+  font-weight: var(--font-heading-h3-weight);
+  line-height: var(--font-heading-h3-line-height);
+}
+
+.text-heading-h4 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-heading-h4-size);
+  font-weight: var(--font-heading-h4-weight);
+  line-height: var(--font-heading-h4-line-height);
+}
+
+.text-heading-h5 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-heading-h5-size);
+  font-weight: var(--font-heading-h5-weight);
+  line-height: var(--font-heading-h5-line-height);
+}
+
+.text-heading-h6 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-heading-h6-size);
+  font-weight: var(--font-heading-h6-weight);
+  line-height: var(--font-heading-h6-line-height);
+}
+
+.text-body-b1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-b1-size);
+  font-weight: var(--font-body-b1-weight);
+  line-height: var(--font-body-b1-line-height);
+}
+
+.text-body-b2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-b2-size);
+  font-weight: var(--font-body-b2-weight);
+  line-height: var(--font-body-b2-line-height);
+}
+
+.text-label-l1-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-regular-size);
+  font-weight: var(--font-label-l1-regular-weight);
+  line-height: var(--font-label-l1-regular-line-height);
+}
+
+.text-label-l1-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-medium-size);
+  font-weight: var(--font-label-l1-medium-weight);
+  line-height: var(--font-label-l1-medium-line-height);
+}
+
+.text-label-l1-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-semibold-size);
+  font-weight: var(--font-label-l1-semibold-weight);
+  line-height: var(--font-label-l1-semibold-line-height);
+}
+
+.text-label-l2-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l2-regular-size);
+  font-weight: var(--font-label-l2-regular-weight);
+  line-height: var(--font-label-l2-regular-line-height);
+}
+
+.text-label-l2-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l2-medium-size);
+  font-weight: var(--font-label-l2-medium-weight);
+  line-height: var(--font-label-l2-medium-line-height);
+}
+
+.text-label-l2-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l2-semibold-size);
+  font-weight: var(--font-label-l2-semibold-weight);
+  line-height: var(--font-label-l2-semibold-line-height);
+}
+
+.text-label-l3-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l3-regular-size);
+  font-weight: var(--font-label-l3-regular-weight);
+  line-height: var(--font-label-l3-regular-line-height);
+}
