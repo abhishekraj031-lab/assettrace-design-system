@@ -1,0 +1,56 @@
+/**
+ * AssetTrace Design System — Radio Button Component
+ * 4 states: Default | Clicked | Disable | Clicked_Disable
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+.radio-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-m);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-default);
+  background-color: var(--surface-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease;
+}
+
+.radio:hover { border-color: var(--border-button-default); }
+
+.radio--selected {
+  border-color: var(--button-default);
+  border-width: 2px;
+}
+.radio--selected::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--button-default);
+}
+
+.radio--disabled {
+  background-color: var(--surface-disable);
+  border-color: var(--border-default);
+  cursor: not-allowed;
+}
+
+.radio-label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-regular-size);
+  font-weight: var(--font-label-l1-regular-weight);
+  color: var(--typography-default);
+}
+
+.radio-wrapper input[type="radio"] { display: none; }
