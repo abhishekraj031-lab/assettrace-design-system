@@ -1,0 +1,60 @@
+/**
+ * AssetTrace Design System — Dropdown Component
+ * 5 states: Default | Hover | Selected | Disable | Disable_Selected
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 320px;
+}
+
+.dropdown-group__label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-semibold-size);
+  font-weight: var(--font-label-l1-semibold-weight);
+  color: var(--typography-default);
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 var(--spacing-xxl);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-s);
+  background-color: var(--surface-default);
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+  position: relative;
+}
+
+.dropdown__text {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-regular-size);
+  color: var(--typography-placeholder);
+  flex: 1;
+}
+.dropdown__text--selected { color: var(--typography-default); }
+
+.dropdown__arrow {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  color: var(--icon-default);
+  flex-shrink: 0;
+}
+
+.dropdown:hover { border-color: var(--color-brand-400); }
+.dropdown--selected { border-color: var(--border-button-default); }
+
+.dropdown--disable {
+  background-color: var(--surface-disable);
+  cursor: not-allowed;
+}
+.dropdown--disable .dropdown__text { color: var(--typography-disable); }
+.dropdown--disable .dropdown__arrow { color: var(--typography-disable); }
