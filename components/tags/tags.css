@@ -1,0 +1,86 @@
+/**
+ * AssetTrace Design System — Tags, Chips & Badge Components
+ * Status Chip: 12 variants | Chip: 11 variants | Badge: 3 variants
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+/* ── Status Chip (small pill) ─────────────── */
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xxs) var(--spacing-m);   /* 2px 8px */
+  border-radius: 100px;
+  border: 1px solid;
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l3-regular-size);   /* 11px */
+  font-weight: var(--font-label-l2-medium-weight);
+  white-space: nowrap;
+}
+
+/* Status Chip colours */
+.status-chip--blue       { background: var(--surface-information); border-color: var(--color-blue-300);   color: var(--typography-information); }
+.status-chip--green      { background: var(--surface-success);     border-color: var(--color-green-300);  color: var(--typography-success); }
+.status-chip--orange     { background: var(--surface-warning);     border-color: var(--color-orange-300); color: var(--typography-warning); }
+.status-chip--red        { background: var(--surface-error);       border-color: var(--color-red-300);    color: var(--typography-error); }
+.status-chip--yellow     { background: var(--surface-caution);     border-color: var(--color-yellow-300); color: var(--typography-caution); }
+.status-chip--grey       { background: var(--surface-light);       border-color: var(--color-grey-300);   color: var(--typography-light); }
+.status-chip--brand      { background: var(--color-brand-50);      border-color: var(--color-brand-300);  color: var(--color-brand-700); }
+.status-chip--purple     { background: var(--color-purple-50);     border-color: var(--color-purple-300); color: var(--color-purple-700); }
+.status-chip--teal       { background: var(--color-teal-50);       border-color: var(--color-teal-300);   color: var(--color-teal-700); }
+
+/* Dark variants */
+.status-chip--blue-dark  { background: var(--color-brand-600);     border-color: var(--color-brand-700);  color: #fff; }
+.status-chip--green-dark { background: var(--color-green-600);     border-color: var(--color-green-700);  color: #fff; }
+.status-chip--grey-dark  { background: var(--color-grey-600);      border-color: var(--color-grey-700);   color: #fff; }
+
+/* ── Chip (medium, with border) ───────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-m);
+  padding: var(--spacing-s) var(--spacing-m);    /* 6px 8px */
+  border-radius: var(--radius-xs);               /* 4px */
+  border: 1px solid;
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l2-medium-size);   /* 12px */
+  font-weight: var(--font-label-l2-medium-weight);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.chip--blue      { background: var(--color-brand-50);   border-color: var(--color-brand-500);   color: var(--color-brand-700); }
+.chip--orange    { background: var(--color-orange-50);  border-color: var(--color-orange-500);  color: var(--color-orange-700); }
+.chip--grey      { background: var(--surface-light);    border-color: var(--color-grey-300);    color: var(--typography-default); }
+
+/* Round chip variant */
+.chip--round {
+  border-radius: 20px;
+  padding: var(--spacing-xs) var(--spacing-m);   /* 4px 8px */
+}
+.chip--round.chip--blue  { background: var(--surface-information); border-color: var(--color-blue-200); color: var(--typography-information); }
+.chip--round.chip--green { background: var(--surface-success);     border-color: var(--color-green-200); color: var(--typography-success); }
+.chip--round.chip--orange{ background: var(--surface-warning);     border-color: var(--color-orange-200); color: var(--typography-warning); }
+.chip--round.chip--red   { background: var(--surface-error);       border-color: var(--color-red-200); color: var(--typography-error); }
+.chip--round.chip--grey  { background: var(--surface-light);       border-color: var(--color-grey-300); color: var(--typography-light); }
+
+/* ── Badge (larger, solid) ────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-m);
+  padding: var(--spacing-m) var(--spacing-l);    /* 8px 10px */
+  border-radius: var(--radius-s);                /* 6px */
+  border: 1px solid var(--border-button-default);
+  background-color: var(--surface-information);
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-semibold-size); /* 14px */
+  font-weight: var(--font-label-l1-semibold-weight);
+  color: var(--typography-button-default);
+  white-space: nowrap;
+}
+
+.badge--filled-blue   { background: var(--color-brand-600); border-color: var(--color-brand-700); color: #fff; }
+.badge--filled-orange { background: var(--color-orange-500); border-color: var(--color-orange-600); color: #fff; }
+.badge--filled-grey   { background: var(--color-grey-600);  border-color: var(--color-grey-700);  color: #fff; }
