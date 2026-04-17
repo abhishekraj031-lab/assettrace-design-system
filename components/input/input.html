@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="input.css">
+  <style>
+    body { font-family: 'Poppins',sans-serif; background:#f8fafc; padding:32px; }
+    .grid { display:flex; flex-wrap:wrap; gap:24px; }
+    .section-title { font-size:11px; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:.08em; margin:24px 0 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="section-title">Default State</div>
+  <div class="grid">
+    <div class="input-group">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><input type="text" placeholder="Enter Email"></div>
+      <span class="input-group__helper">Help text will be shown here</span>
+    </div>
+    <div class="input-group">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><span class="input-field__prefix">+1</span><input type="text" placeholder="Enter Email"></div>
+      <span class="input-group__helper">Help text will be shown here</span>
+    </div>
+    <div class="input-group">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><input type="text" placeholder="Enter Email"><span class="input-field__suffix">+1</span></div>
+      <span class="input-group__helper">Help text will be shown here</span>
+    </div>
+  </div>
+
+  <div class="section-title">Active / Focused State</div>
+  <div class="grid">
+    <div class="input-group input-group--active">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><input type="text" placeholder="Enter Email"></div>
+      <span class="input-group__helper">Help text will be shown here</span>
+    </div>
+  </div>
+
+  <div class="section-title">Filled State</div>
+  <div class="grid">
+    <div class="input-group">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><input type="text" value="abhishek@assettrace.com"></div>
+      <span class="input-group__helper">Help text will be shown here</span>
+    </div>
+  </div>
+
+  <div class="section-title">Error State</div>
+  <div class="grid">
+    <div class="input-group input-group--error">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><input type="text" placeholder="Enter Email"></div>
+      <span class="input-group__helper">This field is required</span>
+    </div>
+  </div>
+
+  <div class="section-title">Disabled State</div>
+  <div class="grid">
+    <div class="input-group input-group--disable">
+      <label class="input-group__label">Email</label>
+      <div class="input-field"><input type="text" placeholder="Enter Email" disabled></div>
+      <span class="input-group__helper">Help text will be shown here</span>
+    </div>
+  </div>
+
+</body>
+</html>
