@@ -1,0 +1,115 @@
+/**
+ * AssetTrace Design System — Input Component
+ * 7 states: Default | Hover | Active | Filled | Disable | Filled_Disable | Error
+ * 5 types: Default | Text First | Icon First | Text Last | Icon Last
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+/* ── Input Wrapper (label + field + helper) ─ */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);    /* 4px */
+  width: 320px;
+}
+
+.input-group__label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-semibold-size);
+  font-weight: var(--font-label-l1-semibold-weight);
+  color: var(--typography-default);
+  line-height: var(--font-label-l1-semibold-line-height);
+}
+
+.input-group__helper {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l2-regular-size);   /* 12px */
+  font-weight: var(--font-label-l2-regular-weight);
+  color: var(--typography-light);
+  line-height: var(--font-label-l2-regular-line-height);
+}
+
+.input-group--error .input-group__helper {
+  color: var(--typography-error);
+}
+
+/* ── Input Field ──────────────────────────── */
+.input-field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);      /* 4px */
+  height: 44px;
+  padding: 0 var(--spacing-xxl);   /* 0 16px */
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-s);  /* 6px */
+  background-color: var(--surface-default);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.input-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-regular-size);     /* 14px */
+  font-weight: var(--font-label-l1-regular-weight);
+  color: var(--typography-default);
+  line-height: var(--font-label-l1-regular-line-height);
+}
+
+.input-field input::placeholder {
+  color: var(--typography-placeholder);
+}
+
+/* Prefix / Suffix text or icon */
+.input-field__prefix,
+.input-field__suffix {
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-regular-size);
+  color: var(--typography-light);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.input-field__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--icon-default);
+  width: 16px;
+  height: 16px;
+}
+
+/* ── States ───────────────────────────────── */
+.input-field:hover,
+.input-group--hover .input-field {
+  border-color: var(--color-brand-400);
+}
+
+.input-field:focus-within,
+.input-group--active .input-field {
+  border-color: var(--border-button-default);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-brand-100);
+}
+
+.input-group--error .input-field {
+  border-color: var(--border-error);
+}
+.input-group--error .input-field:focus-within {
+  box-shadow: 0 0 0 3px var(--color-red-100);
+}
+
+.input-group--disable .input-field,
+.input-field:disabled {
+  background-color: var(--surface-disable);
+  border-color: var(--border-default);
+  cursor: not-allowed;
+}
+.input-group--disable .input-field input {
+  color: var(--typography-disable);
+  cursor: not-allowed;
+  pointer-events: none;
+}
