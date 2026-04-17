@@ -1,0 +1,164 @@
+/**
+ * AssetTrace Design System — Button Component
+ * 3 types: Filled | Outline | Text
+ * 3 sizes: Large (44px) | Medium (40px) | Small (36px)
+ * 7 states: Default | Hover | Active | Disable | Success | Warning | Information | Destructive
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+@import "../../tokens/tokens.css";
+
+/* ── Base ─────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xxl);          /* 16px */
+  padding: 0 var(--spacing-xxl);    /* 0 16px */
+  border-radius: var(--radius-s);   /* 6px */
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l1-semibold-size);       /* 14px */
+  font-weight: var(--font-label-l1-semibold-weight);   /* 600 */
+  line-height: var(--font-label-l1-semibold-line-height);
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-brand-200);
+  outline-offset: 2px;
+}
+
+/* ── Sizes ────────────────────────────────── */
+.btn--lg { height: 44px; }
+.btn--md { height: 40px; }
+.btn--sm { height: 36px; }
+
+/* ── Icons inside button ──────────────────── */
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* ════════════════════════════════════════════
+   TYPE: FILLED
+   ════════════════════════════════════════════ */
+.btn--filled {
+  background-color: var(--button-default);
+  border-color: var(--button-default);
+  color: var(--typography-white);
+}
+.btn--filled:hover,
+.btn--filled.btn--hover {
+  background-color: var(--button-hover);
+  border-color: var(--button-hover);
+}
+.btn--filled:active,
+.btn--filled.btn--active {
+  background-color: var(--button-clicked);
+  border-color: var(--button-clicked);
+}
+.btn--filled:disabled,
+.btn--filled.btn--disabled {
+  background-color: var(--button-disable);
+  border-color: var(--button-disable);
+  color: var(--typography-disable);
+  cursor: not-allowed;
+}
+.btn--filled.btn--success {
+  background-color: var(--button-success);
+  border-color: var(--button-success);
+  color: var(--typography-white);
+}
+.btn--filled.btn--warning {
+  background-color: var(--button-warning);
+  border-color: var(--button-warning);
+  color: var(--typography-white);
+}
+.btn--filled.btn--information {
+  background-color: var(--button-information);
+  border-color: var(--button-information);
+  color: var(--typography-white);
+}
+.btn--filled.btn--destructive {
+  background-color: var(--button-destructive);
+  border-color: var(--button-destructive);
+  color: var(--typography-white);
+}
+
+/* ════════════════════════════════════════════
+   TYPE: OUTLINE
+   ════════════════════════════════════════════ */
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--border-button-default);
+  color: var(--typography-button-default);
+}
+.btn--outline:hover,
+.btn--outline.btn--hover {
+  border-color: var(--border-button-hover);
+  color: var(--typography-button-hover);
+}
+.btn--outline:active,
+.btn--outline.btn--active {
+  border-color: var(--border-button-clicked);
+  color: var(--typography-button-clicked);
+}
+.btn--outline:disabled,
+.btn--outline.btn--disabled {
+  border-color: var(--border-button-disable);
+  color: var(--typography-disable);
+  cursor: not-allowed;
+}
+.btn--outline.btn--success {
+  border-color: var(--border-success);
+  color: var(--typography-success);
+}
+.btn--outline.btn--warning {
+  border-color: var(--border-warning);
+  color: var(--typography-warning);
+}
+.btn--outline.btn--information {
+  border-color: var(--border-information);
+  color: var(--typography-information);
+}
+.btn--outline.btn--destructive {
+  border-color: var(--border-error);
+  color: var(--typography-error);
+}
+
+/* ════════════════════════════════════════════
+   TYPE: TEXT
+   ════════════════════════════════════════════ */
+.btn--text {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--typography-button-default);
+  padding: 0 var(--spacing-xs);
+}
+.btn--text:hover,
+.btn--text.btn--hover {
+  color: var(--typography-button-hover);
+}
+.btn--text:active,
+.btn--text.btn--active {
+  color: var(--typography-button-clicked);
+}
+.btn--text:disabled,
+.btn--text.btn--disabled {
+  color: var(--typography-disable);
+  cursor: not-allowed;
+}
+.btn--text.btn--success  { color: var(--typography-success); }
+.btn--text.btn--warning  { color: var(--typography-warning); }
+.btn--text.btn--information { color: var(--typography-information); }
+.btn--text.btn--destructive { color: var(--typography-error); }
