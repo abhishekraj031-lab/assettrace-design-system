@@ -1,0 +1,79 @@
+/**
+ * AssetTrace Design System — Semantic Colors
+ * 57 semantic color tokens referencing the Color Palette
+ * Use these in components — never use raw palette values directly
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: April 17, 2026
+ */
+
+@import "./colors.css";
+
+:root {
+
+  /* Border */
+  --border-default: var(--color-grey-200); /* #e2e8f0 — Grey/200 */
+  --border-button-default: var(--color-brand-500); /* #2778e2 — Brand/500 */
+  --border-button-hover: var(--color-brand-600); /* #1d62c0 — Brand/600 */
+  --border-button-clicked: var(--color-brand-700); /* #154d9e — Brand/700 */
+  --border-button-disable: var(--color-grey-300); /* #cbd5e1 — Grey/300 */
+  --border-information-tag: var(--color-blue-200); /* #a4e0fe — Blue/200 */
+  --border-information: var(--color-blue-500); /* #1ca3fd — Blue/500 */
+  --border-success-tag: var(--color-green-200); /* #a7f3d0 — Green/200 */
+  --border-success: var(--color-green-500); /* #10b981 — Green/500 */
+  --border-warning-tag: var(--color-orange-200); /* #fed7aa — Orange/200 */
+  --border-warning: var(--color-orange-500); /* #f97316 — Orange/500 */
+  --border-error-tag: var(--color-red-200); /* #fecaca — Red/200 */
+  --border-error: var(--color-red-500); /* #ef4444 — Red/500 */
+  --border-caution: var(--color-yellow-200); /* #fde68a — Yellow/200 */
+
+  /* Surface */
+  --surface-default: var(--color-grey-0); /* #ffffff — Grey/0 */
+  --surface-brand: var(--color-brand-500); /* #2778e2 — Brand/500 */
+  --surface-light: var(--color-grey-100); /* #f1f5f9 — Grey/100 */
+  --surface-black: var(--color-grey-1000); /* #000000 — Grey/1000 */
+  --surface-disable: var(--color-grey-50); /* #f8fafc — Grey/50 */
+  --surface-information: var(--color-blue-50); /* #ebf8ff — Blue/50 */
+  --surface-success: var(--color-green-50); /* #ecfdf5 — Green/50 */
+  --surface-warning: var(--color-orange-50); /* #fff7ed — Orange/50 */
+  --surface-error: var(--color-red-50); /* #fef2f2 — Red/50 */
+  --surface-caution: var(--color-yellow-50); /* #fffbeb — Yellow/50 */
+
+  /* Typography */
+  --typography-default: var(--color-grey-700); /* #334155 — Grey/700 */
+  --typography-light: var(--color-grey-500); /* #64748b — Grey/500 */
+  --typography-placeholder: var(--color-grey-400); /* #94a3b8 — Grey/400 */
+  --typography-disable: var(--color-grey-400); /* #94a3b8 — Grey/400 */
+  --typography-white: var(--color-grey-0); /* #ffffff — Grey/0 */
+  --typography-button-default: var(--color-brand-500); /* #2778e2 — Brand/500 */
+  --typography-button-hover: var(--color-brand-600); /* #1d62c0 — Brand/600 */
+  --typography-button-clicked: var(--color-brand-700); /* #154d9e — Brand/700 */
+  --typography-tag: var(--color-grey-600); /* #475569 — Grey/600 */
+  --typography-information: var(--color-blue-600); /* #028fed — Blue/600 */
+  --typography-success: var(--color-green-600); /* #059669 — Green/600 */
+  --typography-warning: var(--color-orange-400); /* #fb923c — Orange/400 */
+  --typography-error: var(--color-red-500); /* #ef4444 — Red/500 */
+  --typography-caution: var(--color-yellow-500); /* #f59e0b — Yellow/500 */
+
+  /* Icon */
+  --icon-default: var(--color-grey-500); /* #64748b — Grey/500 */
+  --icon-white: var(--color-grey-0); /* #ffffff — Grey/0 */
+  --icon-disable: var(--color-grey-400); /* #94a3b8 — Grey/400 */
+  --icon-button-default: var(--color-brand-500); /* #2778e2 — Brand/500 */
+  --icon-button-hover: var(--color-brand-600); /* #1d62c0 — Brand/600 */
+  --icon-button-clicked: var(--color-brand-700); /* #154d9e — Brand/700 */
+  --icon-information: var(--color-blue-600); /* #028fed — Blue/600 */
+  --icon-success: var(--color-green-600); /* #059669 — Green/600 */
+  --icon-warning: var(--color-orange-400); /* #fb923c — Orange/400 */
+  --icon-error: var(--color-red-500); /* #ef4444 — Red/500 */
+  --icon-caution: var(--color-yellow-500); /* #f59e0b — Yellow/500 */
+
+  /* Button */
+  --button-default: var(--color-brand-500); /* #2778e2 — Brand/500 */
+  --button-hover: var(--color-brand-600); /* #1d62c0 — Brand/600 */
+  --button-clicked: var(--color-blue-700); /* #0277c5 — Blue/700 */
+  --button-disable: var(--color-grey-100); /* #f1f5f9 — Grey/100 */
+  --button-success: var(--color-green-500); /* #10b981 — Green/500 */
+  --button-destructive: var(--color-red-500); /* #ef4444 — Red/500 */
+  --button-warning: var(--color-orange-500); /* #f97316 — Orange/500 */
+  --button-information: var(--color-blue-500); /* #1ca3fd — Blue/500 */
+}
