@@ -1621,97 +1621,100 @@
         <div class="section-header">
           <div class="section-eyebrow">Components</div>
           <h2 class="section-title">Tooltip</h2>
-          <p class="section-desc">8 arrow placements — hover any pill to reveal. Pure CSS, wraps any trigger with zero JavaScript.</p>
+          <p class="section-desc">8 arrow placements. Tooltips shown statically here for reference — in production they appear on hover.</p>
         </div>
 
-        <div class="card">
-          <div class="card-header"><span class="card-label">Arrow: Bottom <span class="card-sublabel">Tooltip above trigger</span></span></div>
-          <div class="card-body">
-            <div class="variants-row" style="gap:32px; padding-top:40px;">
-              <div class="variant-group">
-                <div class="tip-wrap">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-bl">Bottom Left</div>
+        <!-- Arrow: Bottom -->
+        <div class="card" style="overflow:visible;">
+          <div class="card-header"><span class="card-label">Arrow: Bottom <span class="card-sublabel">Tooltip sits above the trigger</span></span></div>
+          <div class="card-body" style="padding-top:56px;">
+            <div class="variants-row" style="gap:48px;">
+
+              <div class="variant-group" style="align-items:flex-start;">
+                <div style="position:relative; display:inline-block;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-bl" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
                 <div class="variant-label" style="margin-top:10px;">Bottom Left</div>
               </div>
-              <div class="variant-group">
-                <div class="tip-wrap">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-bc">Bottom Centre</div>
+
+              <div class="variant-group" style="align-items:center;">
+                <div style="position:relative; display:inline-block;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-bc" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
                 <div class="variant-label" style="margin-top:10px;">Bottom Centre</div>
               </div>
-              <div class="variant-group">
-                <div class="tip-wrap">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-br">Bottom Right</div>
+
+              <div class="variant-group" style="align-items:flex-start;">
+                <div style="position:relative; display:inline-block;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-br" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
                 <div class="variant-label" style="margin-top:10px;">Bottom Right</div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div class="card" style="margin-top:16px;">
-          <div class="card-header"><span class="card-label">Arrow: Top <span class="card-sublabel">Tooltip below trigger</span></span></div>
-          <div class="card-body">
-            <div class="variants-row" style="gap:32px; padding-bottom:40px;">
-              <div class="variant-group">
+        <!-- Arrow: Top -->
+        <div class="card" style="margin-top:16px; overflow:visible;">
+          <div class="card-header"><span class="card-label">Arrow: Top <span class="card-sublabel">Tooltip sits below the trigger</span></span></div>
+          <div class="card-body" style="padding-bottom:56px;">
+            <div class="variants-row" style="gap:48px;">
+
+              <div class="variant-group" style="align-items:flex-start;">
                 <div class="variant-label" style="margin-bottom:10px;">Top Left</div>
-                <div class="tip-wrap">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-tl">Top Left</div>
+                <div style="position:relative; display:inline-block;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-tl" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
               </div>
-              <div class="variant-group">
+
+              <div class="variant-group" style="align-items:center;">
                 <div class="variant-label" style="margin-bottom:10px;">Top Centre</div>
-                <div class="tip-wrap">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-tc">Top Centre</div>
+                <div style="position:relative; display:inline-block;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-tc" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
               </div>
-              <div class="variant-group">
+
+              <div class="variant-group" style="align-items:flex-start;">
                 <div class="variant-label" style="margin-bottom:10px;">Top Right</div>
-                <div class="tip-wrap">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-tr">Top Right</div>
+                <div style="position:relative; display:inline-block;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-tr" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
 
-        <div class="card" style="margin-top:16px;overflow:visible;">
-          <div class="card-header"><span class="card-label">Arrow: Left &amp; Right <span class="card-sublabel">Tooltip beside trigger</span></span></div>
+        <!-- Arrow: Left & Right -->
+        <div class="card" style="margin-top:16px; overflow:visible;">
+          <div class="card-header"><span class="card-label">Arrow: Left &amp; Right <span class="card-sublabel">Tooltip beside the trigger</span></span></div>
           <div class="card-body">
-            <div style="display:flex; gap:0; align-items:stretch;">
+            <div style="display:flex; gap:0; align-items:center;">
 
-              <!-- Left Centre demo -->
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:10px; padding:8px 0;">
+              <!-- Left Centre -->
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:10px; padding:16px 0;">
                 <div class="variant-label">Left Centre</div>
-                <div style="display:flex; align-items:center; justify-content:center; width:100%; position:relative; padding:8px 0;">
-                  <div class="tip-wrap" style="position:static; display:flex; align-items:center; justify-content:center; width:100%;">
-                    <span class="tip-trigger" style="position:relative;">
-                      Hover me
-                      <div class="tip tip-lc" style="position:absolute;">Left Centre</div>
-                    </span>
-                  </div>
+                <div style="position:relative; display:inline-block; margin-left:140px;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-lc" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
               </div>
 
-              <div style="width:1px; background:#f1f5f9; margin:0 16px;"></div>
+              <div style="width:1px; height:60px; background:#f1f5f9; margin:0 8px; flex-shrink:0;"></div>
 
-              <!-- Right Centre demo -->
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:10px; padding:8px 0;">
+              <!-- Right Centre -->
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:10px; padding:16px 0;">
                 <div class="variant-label">Right Centre</div>
-                <div style="display:flex; align-items:center; justify-content:center; width:100%; position:relative; padding:8px 0;">
-                  <div class="tip-wrap" style="position:static; display:flex; align-items:center; justify-content:center; width:100%;">
-                    <span class="tip-trigger" style="position:relative;">
-                      Hover me
-                      <div class="tip tip-rc" style="position:absolute;">Right Centre</div>
-                    </span>
-                  </div>
+                <div style="position:relative; display:inline-block; margin-right:140px;">
+                  <span class="tip-trigger">Button text</span>
+                  <div class="tip tip-rc" style="opacity:1;visibility:visible;">Tooltip label</div>
                 </div>
               </div>
 
