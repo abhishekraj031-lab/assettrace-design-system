@@ -506,6 +506,8 @@
     .tip { position:absolute; z-index:100; display:inline-flex; padding:8px 12px; background:#334155; color:#fff; border-radius:6px; font-family:'Poppins',sans-serif; font-size:11px; white-space:nowrap; pointer-events:none; opacity:0; visibility:hidden; transition:opacity .15s; box-shadow:0 4px 12px rgba(0,0,0,.15); }
     .tip::after { content:''; position:absolute; width:0; height:0; border:5px solid transparent; }
     .tip-wrap:hover .tip { opacity:1; visibility:visible; }
+    .tip-trigger:hover .tip { opacity:1; visibility:visible; }
+    .tip-trigger { position:relative; }
     .tip-bl { bottom:calc(100% + 8px); left:0; } .tip-bl::after { top:100%; left:12px; border-top-color:#334155; }
     .tip-bc { bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); } .tip-bc::after { top:100%; left:50%; transform:translateX(-50%); border-top-color:#334155; }
     .tip-br { bottom:calc(100% + 8px); right:0; } .tip-br::after { top:100%; right:12px; border-top-color:#334155; }
@@ -1680,24 +1682,39 @@
           </div>
         </div>
 
-        <div class="card" style="margin-top:16px;">
+        <div class="card" style="margin-top:16px;overflow:visible;">
           <div class="card-header"><span class="card-label">Arrow: Left &amp; Right <span class="card-sublabel">Tooltip beside trigger</span></span></div>
           <div class="card-body">
-            <div class="variants-row" style="gap:48px;">
-              <div class="variant-group">
-                <div class="variant-label" style="margin-bottom:10px;">Left Centre</div>
-                <div class="tip-wrap" style="padding-left:130px;">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-lc">Left Centre</div>
+            <div style="display:flex; gap:0; align-items:stretch;">
+
+              <!-- Left Centre demo -->
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:10px; padding:8px 0;">
+                <div class="variant-label">Left Centre</div>
+                <div style="display:flex; align-items:center; justify-content:center; width:100%; position:relative; padding:8px 0;">
+                  <div class="tip-wrap" style="position:static; display:flex; align-items:center; justify-content:center; width:100%;">
+                    <span class="tip-trigger" style="position:relative;">
+                      Hover me
+                      <div class="tip tip-lc" style="position:absolute;">Left Centre</div>
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div class="variant-group">
-                <div class="variant-label" style="margin-bottom:10px;">Right Centre</div>
-                <div class="tip-wrap" style="padding-right:130px;">
-                  <span class="tip-trigger">Hover me</span>
-                  <div class="tip tip-rc">Right Centre</div>
+
+              <div style="width:1px; background:#f1f5f9; margin:0 16px;"></div>
+
+              <!-- Right Centre demo -->
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:10px; padding:8px 0;">
+                <div class="variant-label">Right Centre</div>
+                <div style="display:flex; align-items:center; justify-content:center; width:100%; position:relative; padding:8px 0;">
+                  <div class="tip-wrap" style="position:static; display:flex; align-items:center; justify-content:center; width:100%;">
+                    <span class="tip-trigger" style="position:relative;">
+                      Hover me
+                      <div class="tip tip-rc" style="position:absolute;">Right Centre</div>
+                    </span>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
