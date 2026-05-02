@@ -1,0 +1,73 @@
+/**
+ * AssetTrace Design System — Avatar Component
+ * 3 types: Image | Icon | Text
+ * 4 sizes: XS (24px) | SM (32px) | MD (40px) | LG (56px)
+ * 4 statuses: Active | Away | Offline | Busy
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: May 03, 2026
+ */
+
+@import "../../tokens/colors.css";
+@import "../../tokens/semantic-colors.css";
+@import "../../tokens/spacing.css";
+@import "../../tokens/typography.css";
+
+/* ── Base ─────────────────────────────────── */
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: visible;
+  flex-shrink: 0;
+  background-color: var(--color-brand-100);
+  color: var(--color-brand-600);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-label-l2-semibold-weight);
+}
+
+/* ── Sizes ────────────────────────────────── */
+.avatar--xs { width: 24px; height: 24px; font-size: 9px; }
+.avatar--sm { width: 32px; height: 32px; font-size: 11px; }
+.avatar--md { width: 40px; height: 40px; font-size: 14px; }
+.avatar--lg { width: 56px; height: 56px; font-size: 18px; }
+
+/* ── Type: Image ──────────────────────────── */
+.avatar--image img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 50%; display: block;
+}
+
+/* ── Type: Icon ───────────────────────────── */
+.avatar--icon { background-color: var(--color-grey-100); color: var(--icon-default); }
+.avatar--icon svg, .avatar--icon .avatar__icon { width: 55%; height: 55%; }
+
+/* ── Type: Text ───────────────────────────── */
+.avatar--text {
+  background-color: var(--color-brand-100);
+  color: var(--color-brand-700);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ── Status indicator ─────────────────────── */
+.avatar__status {
+  position: absolute; border-radius: 50%;
+  border: 1.5px solid var(--surface-default);
+}
+.avatar--xs .avatar__status { width: 7px;  height: 7px;  bottom: 0;   right: 0; }
+.avatar--sm .avatar__status { width: 9px;  height: 9px;  bottom: 0;   right: 0; }
+.avatar--md .avatar__status { width: 11px; height: 11px; bottom: 1px; right: 1px; }
+.avatar--lg .avatar__status { width: 14px; height: 14px; bottom: 2px; right: 2px; }
+
+.avatar--active  .avatar__status { background-color: var(--color-green-500); }
+.avatar--away    .avatar__status { background-color: var(--color-yellow-400); }
+.avatar--offline .avatar__status { background-color: var(--color-grey-300); }
+.avatar--busy    .avatar__status { background-color: var(--color-red-500); }
+
+/* ── Avatar Group ─────────────────────────── */
+.avatar-group { display: inline-flex; flex-direction: row-reverse; }
+.avatar-group .avatar { margin-left: -8px; border: 2px solid var(--surface-default); }
+.avatar-group .avatar:last-child { margin-left: 0; }

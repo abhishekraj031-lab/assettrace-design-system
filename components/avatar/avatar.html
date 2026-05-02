@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="avatar.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f8fafc; padding: 32px; }
+    .section { margin-bottom: 48px; }
+    .section-title { font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+    .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 12px; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .row--dark { background: #1e293b; border-color: #334155; }
+    .label { font-size: 10px; color: #94a3b8; margin-top: 4px; text-align: center; display: block; }
+    .col { display: flex; flex-direction: column; align-items: center; }
+  </style>
+</head>
+<body>
+
+  <!-- IMAGE AVATARS -->
+  <div class="section">
+    <div class="section-title">Type: Image — All Sizes × All Statuses</div>
+    <div class="row">
+      <div class="col">
+        <div class="avatar avatar--image avatar--xs avatar--active">
+          <img src="https://i.pravatar.cc/56?img=1" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">XS Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--image avatar--sm avatar--active">
+          <img src="https://i.pravatar.cc/56?img=2" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">SM Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--image avatar--md avatar--active">
+          <img src="https://i.pravatar.cc/56?img=3" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">MD Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--image avatar--lg avatar--active">
+          <img src="https://i.pravatar.cc/56?img=4" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">LG Active</span>
+      </div>
+
+      <div class="col">
+        <div class="avatar avatar--image avatar--md avatar--away">
+          <img src="https://i.pravatar.cc/56?img=5" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">Away</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--image avatar--md avatar--offline">
+          <img src="https://i.pravatar.cc/56?img=6" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">Offline</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--image avatar--md avatar--busy">
+          <img src="https://i.pravatar.cc/56?img=7" alt="User">
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">Busy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICON AVATARS -->
+  <div class="section">
+    <div class="section-title">Type: Icon — All Sizes × All Statuses</div>
+    <div class="row">
+      <div class="col">
+        <div class="avatar avatar--icon avatar--xs avatar--active">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">XS Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--icon avatar--sm avatar--active">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">SM Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--icon avatar--md avatar--active">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">MD Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--icon avatar--lg avatar--active">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">LG Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--icon avatar--md avatar--away">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">Away</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--icon avatar--md avatar--offline">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">Offline</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--icon avatar--md avatar--busy">
+          <svg class="avatar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="avatar__status"></span>
+        </div>
+        <span class="label">Busy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT AVATARS -->
+  <div class="section">
+    <div class="section-title">Type: Text (Initials) — All Sizes × All Statuses</div>
+    <div class="row">
+      <div class="col">
+        <div class="avatar avatar--text avatar--xs avatar--active">AB<span class="avatar__status"></span></div>
+        <span class="label">XS Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--text avatar--sm avatar--active">AB<span class="avatar__status"></span></div>
+        <span class="label">SM Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--text avatar--md avatar--active">AB<span class="avatar__status"></span></div>
+        <span class="label">MD Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--text avatar--lg avatar--active">AB<span class="avatar__status"></span></div>
+        <span class="label">LG Active</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--text avatar--md avatar--away">AB<span class="avatar__status"></span></div>
+        <span class="label">Away</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--text avatar--md avatar--offline">AB<span class="avatar__status"></span></div>
+        <span class="label">Offline</span>
+      </div>
+      <div class="col">
+        <div class="avatar avatar--text avatar--md avatar--busy">AB<span class="avatar__status"></span></div>
+        <span class="label">Busy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVATAR GROUP -->
+  <div class="section">
+    <div class="section-title">Avatar Group</div>
+    <div class="row">
+      <div class="avatar-group">
+        <div class="avatar avatar--image avatar--md">
+          <img src="https://i.pravatar.cc/56?img=8" alt="User">
+        </div>
+        <div class="avatar avatar--image avatar--md">
+          <img src="https://i.pravatar.cc/56?img=9" alt="User">
+        </div>
+        <div class="avatar avatar--image avatar--md">
+          <img src="https://i.pravatar.cc/56?img=10" alt="User">
+        </div>
+        <div class="avatar avatar--text avatar--md">+4</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

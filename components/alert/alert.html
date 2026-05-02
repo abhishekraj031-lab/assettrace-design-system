@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="alert.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f8fafc; padding: 32px; }
+    .section { margin-bottom: 48px; }
+    .section-title { font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+    .stack { display: flex; flex-direction: column; gap: 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="section-title">Alert Feedback — All Types</div>
+    <div class="stack">
+
+      <!-- Information -->
+      <div class="alert alert--information">
+        <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__body">
+          <p class="alert__title">Information</p>
+          <p class="alert__message">This is an informational message to help guide the user through a process or provide additional context.</p>
+        </div>
+        <button class="alert__close" onclick="this.closest('.alert').classList.add('alert--dismissed')" aria-label="Close">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+
+      <!-- Success -->
+      <div class="alert alert--success">
+        <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__body">
+          <p class="alert__title">Success</p>
+          <p class="alert__message">Your changes have been saved successfully. The record has been updated and is now live.</p>
+        </div>
+        <button class="alert__close" onclick="this.closest('.alert').classList.add('alert--dismissed')" aria-label="Close">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+
+      <!-- Error / Alert -->
+      <div class="alert alert--error">
+        <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__body">
+          <p class="alert__title">Alert</p>
+          <p class="alert__message">Something went wrong while processing your request. Please try again or contact support if the issue persists.</p>
+        </div>
+        <button class="alert__close" onclick="this.closest('.alert').classList.add('alert--dismissed')" aria-label="Close">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+
+      <!-- Warning -->
+      <div class="alert alert--warning">
+        <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <div class="alert__body">
+          <p class="alert__title">Warning</p>
+          <p class="alert__message">Please review the details carefully before proceeding. This action may have unintended consequences.</p>
+        </div>
+        <button class="alert__close" onclick="this.closest('.alert').classList.add('alert--dismissed')" aria-label="Close">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

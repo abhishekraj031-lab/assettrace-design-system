@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header & Footer — AssetTrace Design System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../tokens/colors.css">
+  <link rel="stylesheet" href="../../tokens/semantic-colors.css">
+  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <link rel="stylesheet" href="../../tokens/typography.css">
+  <link rel="stylesheet" href="header-footer.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f8fafc; padding: 32px; margin: 0; }
+    .section { margin-bottom: 48px; }
+    .section-title { font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+    .demo-box { border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+    .demo-label { font-size: 10px; color: #94a3b8; padding: 6px 12px; background: #f8fafc; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER: Only Logo -->
+  <div class="section">
+    <div class="section-title">Header — State: Only Logo</div>
+    <div class="demo-box">
+      <header class="header">
+        <a href="#" class="header__logo">
+          <div class="header__logo-mark">AT</div>
+          <span class="header__logo-name">AssetTrace</span>
+        </a>
+      </header>
+    </div>
+  </div>
+
+  <!-- HEADER: With Profile -->
+  <div class="section">
+    <div class="section-title">Header — State: With Profile</div>
+    <div class="demo-box">
+      <header class="header">
+        <a href="#" class="header__logo">
+          <div class="header__logo-mark">AT</div>
+          <span class="header__logo-name">AssetTrace</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link header__nav-link--active">Dashboard</a>
+          <a href="#" class="header__nav-link">Assets</a>
+          <a href="#" class="header__nav-link">Reports</a>
+          <a href="#" class="header__nav-link">Settings</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="search-bar">
+            <span class="search-bar__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/>
+              </svg>
+            </span>
+            <input class="search-bar__input" type="text" placeholder="Search assets…">
+          </div>
+
+          <button class="header__icon-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+          </button>
+
+          <div class="header__profile">
+            <div class="avatar avatar--text avatar--sm" style="width:32px;height:32px;border-radius:50%;background:#dbeafe;color:#1d62c0;font-size:11px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;">AG</div>
+            <div class="header__profile-info">
+              <div class="header__profile-name">Abhishek Gupta</div>
+              <div class="header__profile-role">Admin</div>
+            </div>
+            <span class="header__profile-chevron">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l4 4 4-4"/></svg>
+            </span>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- HEADER: Active Profile -->
+  <div class="section">
+    <div class="section-title">Header — State: Active Profile</div>
+    <div class="demo-box">
+      <header class="header">
+        <a href="#" class="header__logo">
+          <div class="header__logo-mark">AT</div>
+          <span class="header__logo-name">AssetTrace</span>
+        </a>
+
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link header__nav-link--active">Dashboard</a>
+          <a href="#" class="header__nav-link">Assets</a>
+          <a href="#" class="header__nav-link">Reports</a>
+          <a href="#" class="header__nav-link">Settings</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="header__icon-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+          </button>
+
+          <div class="header__profile header__profile--active">
+            <div style="width:32px;height:32px;border-radius:50%;background:#dbeafe;color:#1d62c0;font-size:11px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;">AG</div>
+            <div class="header__profile-info">
+              <div class="header__profile-name">Abhishek Gupta</div>
+              <div class="header__profile-role">Admin</div>
+            </div>
+            <span class="header__profile-chevron">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l4-4 4 4"/></svg>
+            </span>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- SEARCH BAR states -->
+  <div class="section">
+    <div class="section-title">Search Bar — Default &amp; Filled</div>
+    <div style="display:flex;flex-direction:column;gap:12px;padding:20px;background:#fff;border-radius:8px;border:1px solid #e2e8f0;">
+      <div>
+        <div class="demo-label">Default</div>
+        <div class="search-bar">
+          <span class="search-bar__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/></svg></span>
+          <input class="search-bar__input" type="text" placeholder="Search assets…">
+        </div>
+      </div>
+      <div>
+        <div class="demo-label">Filled</div>
+        <div class="search-bar search-bar--filled">
+          <span class="search-bar__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/></svg></span>
+          <input class="search-bar__input" type="text" value="Asset #1042">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER: Default -->
+  <div class="section">
+    <div class="section-title">Footer — Default</div>
+    <div class="demo-box">
+      <footer class="footer">
+        <span class="footer__copyright">© 2026 AssetTrace. All rights reserved.</span>
+        <nav class="footer__links">
+          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="#" class="footer__link">Terms of Service</a>
+          <a href="#" class="footer__link">Support</a>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+  <!-- FOOTER: With Border -->
+  <div class="section">
+    <div class="section-title">Footer — With Border</div>
+    <div class="demo-box">
+      <footer class="footer footer--with-border">
+        <span class="footer__copyright">© 2026 AssetTrace. All rights reserved.</span>
+        <nav class="footer__links">
+          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="#" class="footer__link">Terms of Service</a>
+          <a href="#" class="footer__link">Support</a>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>

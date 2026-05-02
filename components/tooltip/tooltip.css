@@ -1,0 +1,121 @@
+/**
+ * AssetTrace Design System — Tooltip Component
+ * 8 arrow positions: Bottom Left | Bottom Centre | Bottom Right
+ *                    Top Left | Top Centre | Top Right
+ *                    Left Centre | Right Centre
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: May 03, 2026
+ */
+
+@import "../../tokens/colors.css";
+@import "../../tokens/semantic-colors.css";
+@import "../../tokens/spacing.css";
+@import "../../tokens/typography.css";
+
+/* ── Base ─────────────────────────────────── */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 100;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-m) var(--spacing-xl);
+  background-color: var(--color-grey-700);
+  color: var(--typography-white);
+  border-radius: var(--radius-s);
+  font-family: var(--font-family-base);
+  font-size: var(--font-label-l2-regular-size);
+  font-weight: var(--font-label-l2-regular-weight);
+  line-height: var(--font-label-l2-regular-line-height);
+  white-space: nowrap;
+  max-width: 254px;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Arrow base */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+}
+
+/* ── Arrow: Bottom (tooltip above trigger) ── */
+.tooltip--bottom-left,
+.tooltip--bottom-centre,
+.tooltip--bottom-right {
+  bottom: calc(100% + 10px);
+}
+.tooltip--bottom-left   { left: 0; }
+.tooltip--bottom-centre { left: 50%; transform: translateX(-50%); }
+.tooltip--bottom-right  { right: 0; }
+
+.tooltip--bottom-left::after,
+.tooltip--bottom-centre::after,
+.tooltip--bottom-right::after {
+  top: 100%;
+  border-top-color: var(--color-grey-700);
+}
+.tooltip--bottom-left::after   { left: 16px; }
+.tooltip--bottom-centre::after { left: 50%; transform: translateX(-50%); }
+.tooltip--bottom-right::after  { right: 16px; }
+
+/* ── Arrow: Top (tooltip below trigger) ──── */
+.tooltip--top-left,
+.tooltip--top-centre,
+.tooltip--top-right {
+  top: calc(100% + 10px);
+}
+.tooltip--top-left   { left: 0; }
+.tooltip--top-centre { left: 50%; transform: translateX(-50%); }
+.tooltip--top-right  { right: 0; }
+
+.tooltip--top-left::after,
+.tooltip--top-centre::after,
+.tooltip--top-right::after {
+  bottom: 100%;
+  border-bottom-color: var(--color-grey-700);
+}
+.tooltip--top-left::after   { left: 16px; }
+.tooltip--top-centre::after { left: 50%; transform: translateX(-50%); }
+.tooltip--top-right::after  { right: 16px; }
+
+/* ── Arrow: Left (tooltip right of trigger) */
+.tooltip--right-centre {
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip--right-centre::after {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right-color: var(--color-grey-700);
+}
+
+/* ── Arrow: Right (tooltip left of trigger) */
+.tooltip--left-centre {
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip--left-centre::after {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: var(--color-grey-700);
+}
+
+/* ── Visibility toggle ───────────────────── */
+.tooltip-wrapper .tooltip { opacity: 0; visibility: hidden; transition: opacity 0.15s ease; }
+.tooltip-wrapper:hover .tooltip { opacity: 1; visibility: visible; }
+
+/* Static display (for documentation) */
+.tooltip--static { opacity: 1 !important; visibility: visible !important; position: static; transform: none !important; }

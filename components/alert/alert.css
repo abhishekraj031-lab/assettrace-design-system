@@ -1,0 +1,107 @@
+/**
+ * AssetTrace Design System — Alert / Feedback Component
+ * 4 types: Information | Success | Alert (Error) | Warning
+ * Auto-generated from Figma — do not edit manually
+ * Last synced: May 03, 2026
+ */
+
+@import "../../tokens/colors.css";
+@import "../../tokens/semantic-colors.css";
+@import "../../tokens/spacing.css";
+@import "../../tokens/typography.css";
+
+/* ── Base ─────────────────────────────────── */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xxl);
+  border-radius: var(--radius-m);
+  border: 1px solid;
+  font-family: var(--font-family-base);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.alert__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+.alert__body { flex: 1; min-width: 0; }
+
+.alert__title {
+  font-size: var(--font-label-l1-semibold-size);
+  font-weight: var(--font-label-l1-semibold-weight);
+  line-height: var(--font-label-l1-semibold-line-height);
+  margin: 0 0 4px;
+}
+
+.alert__message {
+  font-size: var(--font-label-l2-regular-size);
+  font-weight: var(--font-label-l2-regular-weight);
+  line-height: var(--font-label-l2-regular-line-height);
+  margin: 0;
+}
+
+.alert__close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xxs);
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.alert__close:hover { opacity: 1; }
+.alert__close svg { width: 16px; height: 16px; }
+
+/* ── Type: Information ─────────────────────── */
+.alert--information {
+  background-color: var(--surface-information);
+  border-color: var(--border-information);
+}
+.alert--information .alert__icon { color: var(--icon-information); }
+.alert--information .alert__title { color: var(--typography-information); }
+.alert--information .alert__message { color: var(--typography-default); }
+.alert--information .alert__close { color: var(--icon-information); }
+
+/* ── Type: Success ─────────────────────────── */
+.alert--success {
+  background-color: var(--surface-success);
+  border-color: var(--border-success);
+}
+.alert--success .alert__icon { color: var(--icon-success); }
+.alert--success .alert__title { color: var(--typography-success); }
+.alert--success .alert__message { color: var(--typography-default); }
+.alert--success .alert__close { color: var(--icon-success); }
+
+/* ── Type: Error (Alert) ───────────────────── */
+.alert--error {
+  background-color: var(--surface-error);
+  border-color: var(--border-error);
+}
+.alert--error .alert__icon { color: var(--icon-error); }
+.alert--error .alert__title { color: var(--typography-error); }
+.alert--error .alert__message { color: var(--typography-default); }
+.alert--error .alert__close { color: var(--icon-error); }
+
+/* ── Type: Warning ─────────────────────────── */
+.alert--warning {
+  background-color: var(--surface-warning);
+  border-color: var(--border-warning);
+}
+.alert--warning .alert__icon { color: var(--icon-warning); }
+.alert--warning .alert__title { color: var(--typography-warning); }
+.alert--warning .alert__message { color: var(--typography-default); }
+.alert--warning .alert__close { color: var(--icon-warning); }
+
+/* ── Dismissing ────────────────────────────── */
+.alert--dismissed { display: none; }
