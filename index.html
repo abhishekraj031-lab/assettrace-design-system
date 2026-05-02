@@ -476,6 +476,90 @@
       margin: 48px 0 56px;
     }
 
+
+    /* ─── AVATAR ─────────────────────────────────────────── */
+    .av { position:relative; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; overflow:visible; flex-shrink:0; font-family:'Poppins',sans-serif; font-weight:600; }
+    .av img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+    .av-xs { width:24px; height:24px; font-size:9px; }
+    .av-sm { width:32px; height:32px; font-size:11px; }
+    .av-md { width:40px; height:40px; font-size:14px; }
+    .av-lg { width:56px; height:56px; font-size:18px; }
+    .av-image { background:#dbeafe; }
+    .av-text  { background:#dbeafe; color:#1d62c0; text-transform:uppercase; letter-spacing:.02em; }
+    .av-icon  { background:#f1f5f9; color:#64748b; }
+    .av-icon svg { width:55%; height:55%; }
+    .av-dot { position:absolute; border-radius:50%; border:1.5px solid #fff; }
+    .av-xs .av-dot { width:7px;  height:7px;  bottom:0;   right:0; }
+    .av-sm .av-dot { width:9px;  height:9px;  bottom:0;   right:0; }
+    .av-md .av-dot { width:11px; height:11px; bottom:1px; right:1px; }
+    .av-lg .av-dot { width:14px; height:14px; bottom:2px; right:2px; }
+    .av-active  .av-dot { background:#10b981; }
+    .av-away    .av-dot { background:#fbbf24; }
+    .av-offline .av-dot { background:#cbd5e1; }
+    .av-busy    .av-dot { background:#ef4444; }
+    .av-group { display:inline-flex; flex-direction:row-reverse; }
+    .av-group .av { margin-left:-8px; border:2px solid #fff; }
+    .av-group .av:last-child { margin-left:0; }
+
+    /* ─── TOOLTIP ────────────────────────────────────────── */
+    .tip-wrap { position:relative; display:inline-block; }
+    .tip { position:absolute; z-index:100; display:inline-flex; padding:8px 12px; background:#334155; color:#fff; border-radius:6px; font-family:'Poppins',sans-serif; font-size:11px; white-space:nowrap; pointer-events:none; opacity:0; visibility:hidden; transition:opacity .15s; box-shadow:0 4px 12px rgba(0,0,0,.15); }
+    .tip::after { content:''; position:absolute; width:0; height:0; border:5px solid transparent; }
+    .tip-wrap:hover .tip { opacity:1; visibility:visible; }
+    .tip-bl { bottom:calc(100% + 8px); left:0; } .tip-bl::after { top:100%; left:12px; border-top-color:#334155; }
+    .tip-bc { bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); } .tip-bc::after { top:100%; left:50%; transform:translateX(-50%); border-top-color:#334155; }
+    .tip-br { bottom:calc(100% + 8px); right:0; } .tip-br::after { top:100%; right:12px; border-top-color:#334155; }
+    .tip-tl { top:calc(100% + 8px); left:0; } .tip-tl::after { bottom:100%; left:12px; border-bottom-color:#334155; }
+    .tip-tc { top:calc(100% + 8px); left:50%; transform:translateX(-50%); } .tip-tc::after { bottom:100%; left:50%; transform:translateX(-50%); border-bottom-color:#334155; }
+    .tip-tr { top:calc(100% + 8px); right:0; } .tip-tr::after { bottom:100%; right:12px; border-bottom-color:#334155; }
+    .tip-lc { right:calc(100% + 8px); top:50%; transform:translateY(-50%); } .tip-lc::after { left:100%; top:50%; transform:translateY(-50%); border-left-color:#334155; }
+    .tip-rc { left:calc(100% + 8px); top:50%; transform:translateY(-50%); } .tip-rc::after { right:100%; top:50%; transform:translateY(-50%); border-right-color:#334155; }
+    .tip-trigger { display:inline-flex; align-items:center; padding:6px 14px; background:#f1f5f9; border-radius:20px; font-size:12px; color:#475569; border:1px solid #e2e8f0; cursor:default; font-family:'Poppins',sans-serif; }
+
+    /* ─── ALERT ──────────────────────────────────────────── */
+    .alert-fb { display:flex; align-items:flex-start; gap:12px; padding:16px 20px; border-radius:8px; border:1px solid; max-width:600px; font-family:'Poppins',sans-serif; }
+    .alert-fb__icon { flex-shrink:0; width:20px; height:20px; margin-top:1px; }
+    .alert-fb__body { flex:1; }
+    .alert-fb__title { font-size:14px; font-weight:600; margin:0 0 4px; line-height:1.3; }
+    .alert-fb__msg { font-size:12px; margin:0; color:#334155; line-height:1.5; }
+    .alert-fb__x { flex-shrink:0; background:none; border:none; cursor:pointer; padding:2px; border-radius:2px; opacity:.6; transition:opacity .15s; }
+    .alert-fb__x:hover { opacity:1; }
+    .alert-info  { background:#ebf8ff; border-color:#1ca3fd; } .alert-info  .alert-fb__icon, .alert-info  .alert-fb__title, .alert-info  .alert-fb__x { color:#028fed; }
+    .alert-suc   { background:#ecfdf5; border-color:#10b981; } .alert-suc   .alert-fb__icon, .alert-suc   .alert-fb__title, .alert-suc   .alert-fb__x { color:#059669; }
+    .alert-err   { background:#fef2f2; border-color:#ef4444; } .alert-err   .alert-fb__icon, .alert-err   .alert-fb__title, .alert-err   .alert-fb__x { color:#ef4444; }
+    .alert-wrn   { background:#fff7ed; border-color:#f97316; } .alert-wrn   .alert-fb__icon, .alert-wrn   .alert-fb__title, .alert-wrn   .alert-fb__x { color:#fb923c; }
+
+    /* ─── HEADER & FOOTER ────────────────────────────────── */
+    .hf-preview { border:1px solid #e2e8f0; border-radius:8px; overflow:hidden; }
+    .ds-header { display:flex; align-items:center; justify-content:space-between; padding:0 24px; height:64px; background:#fff; border-bottom:1px solid #e2e8f0; font-family:'Poppins',sans-serif; gap:16px; }
+    .ds-header__logo { display:flex; align-items:center; gap:8px; text-decoration:none; flex-shrink:0; }
+    .ds-header__mark { width:32px; height:32px; background:#2778e2; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:13px; font-family:'Poppins',sans-serif; }
+    .ds-header__name { font-size:15px; font-weight:600; color:#0f172a; }
+    .ds-header__nav { display:flex; align-items:center; gap:2px; }
+    .ds-header__link { display:inline-flex; align-items:center; padding:7px 12px; border-radius:6px; font-size:13px; font-weight:400; color:#64748b; text-decoration:none; transition:background .15s,color .15s; white-space:nowrap; }
+    .ds-header__link:hover { background:#f1f5f9; color:#334155; }
+    .ds-header__link--active { background:#eef4fd; color:#1d62c0; font-weight:600; }
+    .ds-header__actions { display:flex; align-items:center; gap:10px; }
+    .ds-header__iconbtn { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:6px; border:none; background:none; cursor:pointer; color:#64748b; transition:background .15s; }
+    .ds-header__iconbtn:hover { background:#f1f5f9; }
+    .ds-header__iconbtn svg { width:17px; height:17px; }
+    .ds-header__profile { display:flex; align-items:center; gap:8px; padding:4px 8px 4px 4px; border-radius:6px; cursor:pointer; border:1px solid transparent; transition:background .15s,border-color .15s; background:none; font-family:'Poppins',sans-serif; }
+    .ds-header__profile:hover { background:#f1f5f9; }
+    .ds-header__profile--active { background:#eef4fd; border-color:#a9caf5; }
+    .ds-header__pname { font-size:12px; font-weight:500; color:#334155; text-align:left; }
+    .ds-header__prole { font-size:10px; color:#64748b; line-height:1; text-align:left; }
+    .ds-searchbar { display:flex; align-items:center; gap:8px; padding:0 12px; height:38px; border:1px solid #e2e8f0; border-radius:6px; background:#fff; transition:border-color .15s; width:220px; }
+    .ds-searchbar:focus-within { border-color:#2778e2; }
+    .ds-searchbar svg { width:14px; height:14px; color:#94a3b8; flex-shrink:0; }
+    .ds-searchbar input { flex:1; border:none; outline:none; background:transparent; font-family:'Poppins',sans-serif; font-size:13px; color:#334155; }
+    .ds-searchbar input::placeholder { color:#94a3b8; }
+    .ds-footer { display:flex; align-items:center; justify-content:space-between; padding:0 24px; height:64px; background:#fff; font-family:'Poppins',sans-serif; }
+    .ds-footer--bordered { border-top:1px solid #e2e8f0; }
+    .ds-footer__copy { font-size:12px; color:#64748b; }
+    .ds-footer__links { display:flex; align-items:center; gap:16px; }
+    .ds-footer__link { font-size:12px; color:#64748b; text-decoration:none; transition:color .15s; }
+    .ds-footer__link:hover { color:#334155; }
+
     /* Icon helper */
     .icon { width: 16px; height: 16px; display: inline-block; vertical-align: middle; }
 
@@ -1429,56 +1513,102 @@
         <div class="section-header">
           <div class="section-eyebrow">Components</div>
           <h2 class="section-title">Avatar</h2>
-          <p class="section-desc">3 types (Image, Icon, Text) × 4 sizes × 4 status indicators. Use for user profile representation across the app.</p>
+          <p class="section-desc">3 types × 4 sizes × 4 status indicators. Use Image for profile photos, Text for initials, and Icon as a fallback.</p>
         </div>
+
         <div class="card">
-          <div class="card-label">Type: Image — Sizes &amp; Statuses</div>
-          <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;padding:16px 0;">
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:24px;height:24px;overflow:hidden;background:#dbeafe;">
-                <img src="https://i.pravatar.cc/56?img=1" alt="User" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-                <span style="position:absolute;bottom:0;right:0;width:7px;height:7px;background:#10b981;border-radius:50%;border:1.5px solid #fff;"></span>
+          <div class="card-header"><span class="card-label">Type: Image &amp; Text — Sizes</span></div>
+          <div class="card-body">
+            <div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+              <div class="variant-group">
+                <div class="variant-label">XS — 24px</div>
+                <div class="av av-xs av-image"><img src="https://i.pravatar.cc/56?img=1" alt="User"></div>
               </div>
-              <span style="font-size:10px;color:#94a3b8;">XS · Active</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:32px;height:32px;overflow:hidden;background:#dbeafe;">
-                <img src="https://i.pravatar.cc/56?img=2" alt="User" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-                <span style="position:absolute;bottom:0;right:0;width:9px;height:9px;background:#fbbf24;border-radius:50%;border:1.5px solid #fff;"></span>
+              <div class="variant-group">
+                <div class="variant-label">SM — 32px</div>
+                <div class="av av-sm av-image"><img src="https://i.pravatar.cc/56?img=2" alt="User"></div>
               </div>
-              <span style="font-size:10px;color:#94a3b8;">SM · Away</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:40px;height:40px;overflow:hidden;background:#dbeafe;">
-                <img src="https://i.pravatar.cc/56?img=3" alt="User" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-                <span style="position:absolute;bottom:1px;right:1px;width:11px;height:11px;background:#cbd5e1;border-radius:50%;border:1.5px solid #fff;"></span>
+              <div class="variant-group">
+                <div class="variant-label">MD — 40px</div>
+                <div class="av av-md av-image"><img src="https://i.pravatar.cc/56?img=3" alt="User"></div>
               </div>
-              <span style="font-size:10px;color:#94a3b8;">MD · Offline</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:56px;height:56px;overflow:hidden;background:#dbeafe;">
-                <img src="https://i.pravatar.cc/56?img=4" alt="User" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-                <span style="position:absolute;bottom:2px;right:2px;width:14px;height:14px;background:#ef4444;border-radius:50%;border:1.5px solid #fff;"></span>
+              <div class="variant-group">
+                <div class="variant-label">LG — 56px</div>
+                <div class="av av-lg av-image"><img src="https://i.pravatar.cc/56?img=4" alt="User"></div>
               </div>
-              <span style="font-size:10px;color:#94a3b8;">LG · Busy</span>
-            </div>
-            <div style="width:1px;height:40px;background:#e2e8f0;margin:0 8px;"></div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:40px;height:40px;background:#dbeafe;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#1d62c0;">AG
-                <span style="position:absolute;bottom:1px;right:1px;width:11px;height:11px;background:#10b981;border-radius:50%;border:1.5px solid #fff;"></span>
+              <hr class="divider" style="border:none;border-left:1px solid #e2e8f0;height:56px;margin:0 8px;">
+              <div class="variant-group">
+                <div class="variant-label">Text (MD)</div>
+                <div class="av av-md av-text">AG</div>
               </div>
-              <span style="font-size:10px;color:#94a3b8;">Text · Active</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div style="display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:40px;height:40px;background:#f1f5f9;color:#64748b;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <div class="variant-group">
+                <div class="variant-label">Icon (MD)</div>
+                <div class="av av-md av-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
               </div>
-              <span style="font-size:10px;color:#94a3b8;">Icon · No status</span>
             </div>
           </div>
         </div>
-        <div style="margin-top:8px;">
-          <a href="components/avatar/avatar.html" style="font-size:12px;color:#2778e2;text-decoration:none;">View full component →</a>
+
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Status Indicators</span></div>
+          <div class="card-body">
+            <div class="variants-row" style="gap:32px;">
+              <div class="variant-group">
+                <div class="variant-label">Active</div>
+                <div class="av av-md av-image av-active">
+                  <img src="https://i.pravatar.cc/56?img=5" alt="User">
+                  <span class="av-dot"></span>
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label">Away</div>
+                <div class="av av-md av-image av-away">
+                  <img src="https://i.pravatar.cc/56?img=6" alt="User">
+                  <span class="av-dot"></span>
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label">Offline</div>
+                <div class="av av-md av-image av-offline">
+                  <img src="https://i.pravatar.cc/56?img=7" alt="User">
+                  <span class="av-dot"></span>
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label">Busy</div>
+                <div class="av av-md av-image av-busy">
+                  <img src="https://i.pravatar.cc/56?img=8" alt="User">
+                  <span class="av-dot"></span>
+                </div>
+              </div>
+              <hr class="divider" style="border:none;border-left:1px solid #e2e8f0;height:48px;margin:0 8px;">
+              <div class="variant-group">
+                <div class="variant-label">Text + Active</div>
+                <div class="av av-md av-text av-active">AG<span class="av-dot"></span></div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label">Icon + Away</div>
+                <div class="av av-md av-icon av-away">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <span class="av-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Avatar Group</span></div>
+          <div class="card-body">
+            <div class="av-group">
+              <div class="av av-md av-text">+4</div>
+              <div class="av av-md av-image"><img src="https://i.pravatar.cc/56?img=10" alt="User"></div>
+              <div class="av av-md av-image"><img src="https://i.pravatar.cc/56?img=9" alt="User"></div>
+              <div class="av av-md av-image"><img src="https://i.pravatar.cc/56?img=8" alt="User"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1489,130 +1619,163 @@
         <div class="section-header">
           <div class="section-eyebrow">Components</div>
           <h2 class="section-title">Tooltip</h2>
-          <p class="section-desc">8 arrow placements — hover any trigger to reveal the tooltip. Wraps any element with zero extra markup.</p>
+          <p class="section-desc">8 arrow placements — hover any pill to reveal. Pure CSS, wraps any trigger with zero JavaScript.</p>
         </div>
+
         <div class="card">
-          <div class="card-label">All 8 Arrow Positions — Hover to reveal</div>
-          <div style="display:flex;flex-wrap:wrap;gap:32px;padding:24px 0;align-items:center;">
-            <style>
-              .tt-wrap{position:relative;display:inline-block;}
-              .tt-wrap .tt{position:absolute;z-index:100;display:inline-flex;padding:8px 12px;background:#334155;color:#fff;border-radius:6px;font-family:'Poppins',sans-serif;font-size:11px;white-space:nowrap;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .15s;box-shadow:0 4px 12px rgba(0,0,0,.15);}
-              .tt-wrap .tt::after{content:'';position:absolute;width:0;height:0;border:5px solid transparent;}
-              .tt-wrap:hover .tt{opacity:1;visibility:visible;}
-              .tt-bl{bottom:calc(100% + 8px);left:0;}.tt-bl::after{top:100%;left:12px;border-top-color:#334155;}
-              .tt-bc{bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);}.tt-bc::after{top:100%;left:50%;transform:translateX(-50%);border-top-color:#334155;}
-              .tt-br{bottom:calc(100% + 8px);right:0;}.tt-br::after{top:100%;right:12px;border-top-color:#334155;}
-              .tt-tl{top:calc(100% + 8px);left:0;}.tt-tl::after{bottom:100%;left:12px;border-bottom-color:#334155;}
-              .tt-tc{top:calc(100% + 8px);left:50%;transform:translateX(-50%);}.tt-tc::after{bottom:100%;left:50%;transform:translateX(-50%);border-bottom-color:#334155;}
-              .tt-tr{top:calc(100% + 8px);right:0;}.tt-tr::after{bottom:100%;right:12px;border-bottom-color:#334155;}
-              .tt-lc{right:calc(100% + 8px);top:50%;transform:translateY(-50%);}.tt-lc::after{left:100%;top:50%;transform:translateY(-50%);border-left-color:#334155;}
-              .tt-rc{left:calc(100% + 8px);top:50%;transform:translateY(-50%);}.tt-rc::after{right:100%;top:50%;transform:translateY(-50%);border-right-color:#334155;}
-              .tt-trigger{display:inline-flex;align-items:center;padding:6px 14px;background:#f1f5f9;border-radius:20px;font-size:12px;color:#475569;border:1px solid #e2e8f0;cursor:default;font-family:'Poppins',sans-serif;}
-            </style>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:36px 0 8px;">
-                <span class="tt-trigger">↑ Bottom Left</span>
-                <div class="tt tt-bl">Bottom Left</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Bottom Left</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:36px 0 8px;">
-                <span class="tt-trigger">↑ Bottom Centre</span>
-                <div class="tt tt-bc">Bottom Centre</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Bottom Centre</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:36px 0 8px;">
-                <span class="tt-trigger">↑ Bottom Right</span>
-                <div class="tt tt-br">Bottom Right</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Bottom Right</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:8px 0 36px;">
-                <span class="tt-trigger">↓ Top Left</span>
-                <div class="tt tt-tl">Top Left</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Top Left</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:8px 0 36px;">
-                <span class="tt-trigger">↓ Top Centre</span>
-                <div class="tt tt-tc">Top Centre</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Top Centre</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:8px 0 36px;">
-                <span class="tt-trigger">↓ Top Right</span>
-                <div class="tt tt-tr">Top Right</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Top Right</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:0 8px 0 120px;">
-                <span class="tt-trigger">← Left</span>
-                <div class="tt tt-lc">Left Centre</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Left Centre</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-              <div class="tt-wrap" style="padding:0 120px 0 8px;">
-                <span class="tt-trigger">Right →</span>
-                <div class="tt tt-rc">Right Centre</div>
-              </div><span style="font-size:10px;color:#94a3b8;">Arrow Right Centre</span>
+          <div class="card-header"><span class="card-label">Arrow: Bottom <span class="card-sublabel">Tooltip above trigger</span></span></div>
+          <div class="card-body">
+            <div class="variants-row" style="gap:32px; padding-top:40px;">
+              <div class="variant-group">
+                <div class="tip-wrap">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-bl">Bottom Left</div>
+                </div>
+                <div class="variant-label" style="margin-top:10px;">Bottom Left</div>
+              </div>
+              <div class="variant-group">
+                <div class="tip-wrap">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-bc">Bottom Centre</div>
+                </div>
+                <div class="variant-label" style="margin-top:10px;">Bottom Centre</div>
+              </div>
+              <div class="variant-group">
+                <div class="tip-wrap">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-br">Bottom Right</div>
+                </div>
+                <div class="variant-label" style="margin-top:10px;">Bottom Right</div>
+              </div>
             </div>
           </div>
         </div>
-        <div style="margin-top:8px;">
-          <a href="components/tooltip/tooltip.html" style="font-size:12px;color:#2778e2;text-decoration:none;">View full component →</a>
+
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Arrow: Top <span class="card-sublabel">Tooltip below trigger</span></span></div>
+          <div class="card-body">
+            <div class="variants-row" style="gap:32px; padding-bottom:40px;">
+              <div class="variant-group">
+                <div class="variant-label" style="margin-bottom:10px;">Top Left</div>
+                <div class="tip-wrap">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-tl">Top Left</div>
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label" style="margin-bottom:10px;">Top Centre</div>
+                <div class="tip-wrap">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-tc">Top Centre</div>
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label" style="margin-bottom:10px;">Top Right</div>
+                <div class="tip-wrap">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-tr">Top Right</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Arrow: Left &amp; Right <span class="card-sublabel">Tooltip beside trigger</span></span></div>
+          <div class="card-body">
+            <div class="variants-row" style="gap:48px;">
+              <div class="variant-group">
+                <div class="variant-label" style="margin-bottom:10px;">Left Centre</div>
+                <div class="tip-wrap" style="padding-left:130px;">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-lc">Left Centre</div>
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label" style="margin-bottom:10px;">Right Centre</div>
+                <div class="tip-wrap" style="padding-right:130px;">
+                  <span class="tip-trigger">Hover me</span>
+                  <div class="tip tip-rc">Right Centre</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <div class="big-divider"></div>
 
-      <!-- ── ALERT ─────────────────────────────────────────── -->
+      <!-- ── ALERT ──────────────────────────────────────────── -->
       <section class="section" id="alert">
         <div class="section-header">
           <div class="section-eyebrow">Components</div>
           <h2 class="section-title">Alert</h2>
-          <p class="section-desc">4 semantic types for system feedback — Information, Success, Error, and Warning. Dismissible via close button.</p>
+          <p class="section-desc">4 semantic feedback types — click the × to dismiss. Uses semantic color tokens for consistent theming.</p>
         </div>
+
         <div class="card">
-          <div class="card-label">All Types</div>
-          <div style="display:flex;flex-direction:column;gap:12px;padding:8px 0;">
-            <style>
-              .al{display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:8px;border:1px solid;max-width:600px;font-family:'Poppins',sans-serif;}
-              .al__icon{flex-shrink:0;width:20px;height:20px;margin-top:1px;}
-              .al__body{flex:1;}
-              .al__title{font-size:14px;font-weight:600;margin:0 0 4px;}
-              .al__msg{font-size:12px;margin:0;color:#334155;line-height:1.5;}
-              .al__x{flex-shrink:0;background:none;border:none;cursor:pointer;opacity:.6;padding:2px;border-radius:2px;}
-              .al__x:hover{opacity:1;}
-              .al--info{background:#ebf8ff;border-color:#1ca3fd;} .al--info .al__icon,.al--info .al__title,.al--info .al__x{color:#028fed;}
-              .al--suc{background:#ecfdf5;border-color:#10b981;} .al--suc .al__icon,.al--suc .al__title,.al--suc .al__x{color:#059669;}
-              .al--err{background:#fef2f2;border-color:#ef4444;} .al--err .al__icon,.al--err .al__title,.al--err .al__x{color:#ef4444;}
-              .al--wrn{background:#fff7ed;border-color:#f97316;} .al--wrn .al__icon,.al--wrn .al__title,.al--wrn .al__x{color:#fb923c;}
-            </style>
-            <div class="al al--info">
-              <svg class="al__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
-              <div class="al__body"><p class="al__title">Information</p><p class="al__msg">This is an informational message to help guide the user.</p></div>
-              <button class="al__x" onclick="this.closest('.al').style.display='none'" aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
-            </div>
-            <div class="al al--suc">
-              <svg class="al__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              <div class="al__body"><p class="al__title">Success</p><p class="al__msg">Your changes have been saved successfully.</p></div>
-              <button class="al__x" onclick="this.closest('.al').style.display='none'" aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
-            </div>
-            <div class="al al--err">
-              <svg class="al__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
-              <div class="al__body"><p class="al__title">Alert</p><p class="al__msg">Something went wrong. Please try again or contact support.</p></div>
-              <button class="al__x" onclick="this.closest('.al').style.display='none'" aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
-            </div>
-            <div class="al al--wrn">
-              <svg class="al__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
-              <div class="al__body"><p class="al__title">Warning</p><p class="al__msg">Please review this carefully before proceeding.</p></div>
-              <button class="al__x" onclick="this.closest('.al').style.display='none'" aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+          <div class="card-header"><span class="card-label">Types <span class="card-sublabel">4 variants</span></span></div>
+          <div class="card-body">
+            <div class="variants-col" style="gap:12px; max-width:600px;">
+
+              <div class="variant-group">
+                <div class="variant-label">Information</div>
+                <div class="alert-fb alert-info">
+                  <svg class="alert-fb__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                  <div class="alert-fb__body">
+                    <p class="alert-fb__title">Information</p>
+                    <p class="alert-fb__msg">This is an informational message to help guide the user through a process.</p>
+                  </div>
+                  <button class="alert-fb__x" onclick="this.closest('.alert-fb').style.display='none'" aria-label="Dismiss">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="variant-group">
+                <div class="variant-label">Success</div>
+                <div class="alert-fb alert-suc">
+                  <svg class="alert-fb__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <div class="alert-fb__body">
+                    <p class="alert-fb__title">Success</p>
+                    <p class="alert-fb__msg">Your changes have been saved successfully. The record is now live.</p>
+                  </div>
+                  <button class="alert-fb__x" onclick="this.closest('.alert-fb').style.display='none'" aria-label="Dismiss">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="variant-group">
+                <div class="variant-label">Alert (Error)</div>
+                <div class="alert-fb alert-err">
+                  <svg class="alert-fb__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                  <div class="alert-fb__body">
+                    <p class="alert-fb__title">Alert</p>
+                    <p class="alert-fb__msg">Something went wrong. Please try again or contact support if the issue persists.</p>
+                  </div>
+                  <button class="alert-fb__x" onclick="this.closest('.alert-fb').style.display='none'" aria-label="Dismiss">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="variant-group">
+                <div class="variant-label">Warning</div>
+                <div class="alert-fb alert-wrn">
+                  <svg class="alert-fb__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                  <div class="alert-fb__body">
+                    <p class="alert-fb__title">Warning</p>
+                    <p class="alert-fb__msg">Please review the details carefully before proceeding.</p>
+                  </div>
+                  <button class="alert-fb__x" onclick="this.closest('.alert-fb').style.display='none'" aria-label="Dismiss">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
-        </div>
-        <div style="margin-top:8px;">
-          <a href="components/alert/alert.html" style="font-size:12px;color:#2778e2;text-decoration:none;">View full component →</a>
         </div>
       </section>
 
@@ -1623,53 +1786,153 @@
         <div class="section-header">
           <div class="section-eyebrow">Components</div>
           <h2 class="section-title">Header &amp; Footer</h2>
-          <p class="section-desc">3 header states (Only Logo, With Profile, Active Profile) and 2 footer variants (Default, With Border). Includes Search Bar.</p>
+          <p class="section-desc">3 header states and 2 footer variants. Includes a Search Bar component used within the header.</p>
         </div>
+
+        <!-- Header: Only Logo -->
         <div class="card">
-          <div class="card-label">Header — With Profile</div>
-          <div style="border:1px solid #e2e8f0;border-radius:6px;overflow:hidden;margin-top:8px;">
-            <header style="display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px;background:#fff;font-family:'Poppins',sans-serif;">
-              <a href="#" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
-                <div style="width:32px;height:32px;background:#2778e2;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;font-family:'Poppins',sans-serif;">AT</div>
-                <span style="font-size:16px;font-weight:600;color:#334155;">AssetTrace</span>
-              </a>
-              <nav style="display:flex;gap:4px;">
-                <a href="#" style="display:inline-flex;align-items:center;padding:8px 12px;border-radius:6px;font-size:14px;font-weight:600;color:#1d62c0;background:#eff6ff;text-decoration:none;">Dashboard</a>
-                <a href="#" style="display:inline-flex;align-items:center;padding:8px 12px;border-radius:6px;font-size:14px;color:#64748b;text-decoration:none;">Assets</a>
-                <a href="#" style="display:inline-flex;align-items:center;padding:8px 12px;border-radius:6px;font-size:14px;color:#64748b;text-decoration:none;">Reports</a>
-              </nav>
-              <div style="display:flex;align-items:center;gap:12px;">
-                <div style="display:flex;align-items:center;gap:8px;padding:0 12px;height:40px;border:1px solid #e2e8f0;border-radius:6px;background:#fff;width:200px;">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#94a3b8" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/></svg>
-                  <span style="font-size:13px;color:#94a3b8;font-family:'Poppins',sans-serif;">Search…</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:8px;padding:4px 8px 4px 4px;border-radius:6px;cursor:pointer;border:1px solid transparent;">
-                  <div style="width:32px;height:32px;border-radius:50%;background:#dbeafe;color:#1d62c0;font-size:11px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;">AG</div>
-                  <div><div style="font-size:12px;font-weight:500;color:#334155;">Abhishek</div><div style="font-size:10px;color:#64748b;">Admin</div></div>
+          <div class="card-header"><span class="card-label">Header — Only Logo</span></div>
+          <div class="card-body-tight">
+            <div class="hf-preview">
+              <div class="ds-header">
+                <a href="#" class="ds-header__logo">
+                  <div class="ds-header__mark">AT</div>
+                  <span class="ds-header__name">AssetTrace</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header: With Profile -->
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Header — With Profile</span></div>
+          <div class="card-body-tight">
+            <div class="hf-preview">
+              <div class="ds-header">
+                <a href="#" class="ds-header__logo">
+                  <div class="ds-header__mark">AT</div>
+                  <span class="ds-header__name">AssetTrace</span>
+                </a>
+                <nav class="ds-header__nav">
+                  <a href="#" class="ds-header__link ds-header__link--active">Dashboard</a>
+                  <a href="#" class="ds-header__link">Assets</a>
+                  <a href="#" class="ds-header__link">Reports</a>
+                  <a href="#" class="ds-header__link">Settings</a>
+                </nav>
+                <div class="ds-header__actions">
+                  <div class="ds-searchbar">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/></svg>
+                    <input type="text" placeholder="Search assets…">
+                  </div>
+                  <button class="ds-header__iconbtn" aria-label="Notifications">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                  </button>
+                  <div class="ds-header__profile">
+                    <div class="av av-sm av-text">AG</div>
+                    <div>
+                      <div class="ds-header__pname">Abhishek Gupta</div>
+                      <div class="ds-header__prole">Admin</div>
+                    </div>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#94a3b8" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg>
+                  </div>
                 </div>
               </div>
-            </header>
+            </div>
           </div>
         </div>
-        <div class="card" style="margin-top:12px;">
-          <div class="card-label">Footer — With Border</div>
-          <div style="border:1px solid #e2e8f0;border-radius:6px;overflow:hidden;margin-top:8px;">
-            <footer style="display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:76px;background:#fff;border-top:1px solid #e2e8f0;font-family:'Poppins',sans-serif;">
-              <span style="font-size:12px;color:#64748b;">© 2026 AssetTrace. All rights reserved.</span>
-              <nav style="display:flex;gap:16px;">
-                <a href="#" style="font-size:12px;color:#64748b;text-decoration:none;">Privacy Policy</a>
-                <a href="#" style="font-size:12px;color:#64748b;text-decoration:none;">Terms of Service</a>
-                <a href="#" style="font-size:12px;color:#64748b;text-decoration:none;">Support</a>
-              </nav>
-            </footer>
+
+        <!-- Header: Active Profile -->
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Header — Active Profile</span></div>
+          <div class="card-body-tight">
+            <div class="hf-preview">
+              <div class="ds-header">
+                <a href="#" class="ds-header__logo">
+                  <div class="ds-header__mark">AT</div>
+                  <span class="ds-header__name">AssetTrace</span>
+                </a>
+                <nav class="ds-header__nav">
+                  <a href="#" class="ds-header__link ds-header__link--active">Dashboard</a>
+                  <a href="#" class="ds-header__link">Assets</a>
+                  <a href="#" class="ds-header__link">Reports</a>
+                </nav>
+                <div class="ds-header__actions">
+                  <button class="ds-header__iconbtn" aria-label="Notifications">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                  </button>
+                  <div class="ds-header__profile ds-header__profile--active">
+                    <div class="av av-sm av-text">AG</div>
+                    <div>
+                      <div class="ds-header__pname">Abhishek Gupta</div>
+                      <div class="ds-header__prole">Admin</div>
+                    </div>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#94a3b8" stroke-width="1.5"><path d="M2 8l4-4 4 4"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div style="margin-top:8px;">
-          <a href="components/header-footer/header-footer.html" style="font-size:12px;color:#2778e2;text-decoration:none;">View full component →</a>
+
+        <!-- Search Bar -->
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Search Bar <span class="card-sublabel">2 states</span></span></div>
+          <div class="card-body">
+            <div class="variants-row" style="gap:32px; align-items:flex-start;">
+              <div class="variant-group">
+                <div class="variant-label">Default</div>
+                <div class="ds-searchbar" style="width:260px;">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/></svg>
+                  <input type="text" placeholder="Search assets…">
+                </div>
+              </div>
+              <div class="variant-group">
+                <div class="variant-label">Filled</div>
+                <div class="ds-searchbar" style="width:260px; border-color:#2778e2;">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="#2778e2" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l3 3"/></svg>
+                  <input type="text" value="Asset #1042">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header"><span class="card-label">Footer <span class="card-sublabel">2 variants</span></span></div>
+          <div class="card-body-tight">
+            <div class="variant-group" style="margin-bottom:16px;">
+              <div class="variant-label" style="padding:0 0 8px;">Default</div>
+              <div class="hf-preview">
+                <div class="ds-footer">
+                  <span class="ds-footer__copy">© 2026 AssetTrace. All rights reserved.</span>
+                  <nav class="ds-footer__links">
+                    <a href="#" class="ds-footer__link">Privacy Policy</a>
+                    <a href="#" class="ds-footer__link">Terms of Service</a>
+                    <a href="#" class="ds-footer__link">Support</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="variant-group">
+              <div class="variant-label" style="padding:0 0 8px;">With Border</div>
+              <div class="hf-preview">
+                <div class="ds-footer ds-footer--bordered">
+                  <span class="ds-footer__copy">© 2026 AssetTrace. All rights reserved.</span>
+                  <nav class="ds-footer__links">
+                    <a href="#" class="ds-footer__link">Privacy Policy</a>
+                    <a href="#" class="ds-footer__link">Terms of Service</a>
+                    <a href="#" class="ds-footer__link">Support</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Footer -->
+            <!-- Footer -->
       <div style="border-top: 1px solid #e2e8f0; padding-top: 32px; margin-top: 32px; display:flex; justify-content:space-between; align-items:center;">
         <div>
           <div style="font-size:14px; font-weight:600; color:#0f172a;">AssetTrace Design System</div>
